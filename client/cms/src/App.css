@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #000;
+  --color-base: #f0f0f0;
+  --color-white: #fff;
+  --swiper-navigation-color: var(--color-primary);
+  --swiper-scrollbar-size: 4px;
+  --swiper-scrollbar-bottom: 0;
+  --swiper-scrollbar-drag-bg-color: var(--color-primary);
+  --swiper-navigation-top-offset: 95%;
+}
+
+.swiper-scrollbar-horizontal {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: var(--swiper-scrollbar-size);
+  /* Custom width from root variable */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--swiper-scrollbar-drag-bg-color);
+  /* Custom color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.ant-modal .ant-btn-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: white !important;
+}
+
+.ant-modal .ant-btn-default:hover {
+  background-color: transparent !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
+}
+
+/* Định nghĩa CSS tùy chỉnh cho thanh cuộn toàn cục */
+.ant-table-content, .ant-table-body {
+  scrollbar-width: thin !important; /* Firefox */
+  scrollbar-color: var(--color-primary) var(--color-base) !important; /* Firefox */
+
+  /* Webkit browsers */
+  &::-webkit-scrollbar {
+    width: 8px !important; /* Độ rộng thanh cuộn dọc */
+    height: 8px !important; /* Độ cao thanh cuộn ngang */
+    border-radius: 8px !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--color-base) !important; /* Màu nền */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary) !important; /* Màu của thanh cuộn */
+    border-radius: 8px !important; /* Góc bo tròn */
+  }
+}
+
+/* Định nghĩa css upload */
+.avatar-upload .ant-upload {
+  width: 150px !important;
+  height: 150px !important;
+  font-size: 16px;
+}
+
+
+/* Áp dụng body card height 100% */
+.card-statistic .ant-card-body {
+  height: 100%
+}
+
+/* Cố định chiều cao của Text Area */
+.ant-input {
+  resize: none !important;
+}
+
+/* Custom label của Description */
+.ant-descriptions-item-label  {
+  font-weight: 500 !important;
+  color: #000 !important;
+}
+/* chỉ tính cho số lượng column là 2 */
+.ant-descriptions-item-label,
+.ant-descriptions-item-content {
+  width: 25% !important; 
+}
+
+/* Custom label tab */
+.ant-tabs-tab {
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+
+.anticon-undo, .anticon-redo {
+  display: none !important;
+}
+
+/* Custom thẻ pre giống với Antd */
+pre {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px; /* Giống với text trong Antd */
+}
+
+/* Custom Statistic content của Antd */
+.ant-statistic-content {
+  align-items: center;
+  display: flex;
+}
+
+/* Custom menu selected item */
+.custom-menu .ant-menu-item-selected {
+  @apply text-white;
+}
+
+.ant-menu-submenu-title {
+  padding-left: 12px !important;
+}
+
+.ant-menu-light.ant-menu-inline .ant-menu-item {
+  padding-left: 12px !important;
+}
+
+.ck-editor__editable_inline {
+  min-height: 250px;
+  background: #fefefe;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+
+

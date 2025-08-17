@@ -1,0 +1,22 @@
+stages:
+  - deploy
+
+deploy_preview:
+  stage: deploy
+  script:
+    - vercel --token 
+  only:
+    - dev
+    environment:
+    name: development
+    url: 
+
+deploy_production:
+  stage: deploy
+  script:
+    - vercel --prod --token 
+  only:
+    - main
+    environment:
+    name: development
+    url: 
